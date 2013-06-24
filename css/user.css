@@ -1,0 +1,28 @@
+header {
+	background: #e2e9e6;
+}
+footer,
+hr {float: left;width: 100%;}
+.demo-panel-title {display: none;}
+footer {position: relative; bottom: 0; padding: 20px 0;}
+h3.muted {
+float: left;
+margin: 20px 0;
+color: #123456;
+font-weight: bold;	
+}
+.well {
+float: left;
+width: 100%;
+}
+.actionBtn {
+	margin: 40px 0 0 179px;
+}
+.mbl article {margin: 20px 0; float: left;}
+.swtaches {
+	min-height: 6em;
+}
+height: 100px;
+footer aside {float: right;}
+footer ul {margin: 0;}
+footer ul li {list-style: none;}

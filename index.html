@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Color Swatch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Loading Bootstrap -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Loading Flat UI -->
+        <link href="css/flat-ui.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="css/farbtastic.css" type="text/css" />
+        <link rel="stylesheet" href="css/user.css" type="text/css" />
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    </head>
+    <body>
+
+      <header>
+        <section class="container">
+              <div class="masthead navbar">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#whatModal" data-toggle="modal">What is this?</a></li>
+                    <li><a href="http://zone-live.github.io/resume/"  target="_blank">About</a></li>
+                    <li><a href="mailto:apregadas@gmail.com" target="_blank">Contact</a></li>
+                </ul>
+                <h3 class="muted">Color Swatch</h3>
+            </div>
+        </section>
+      </header>
+
+        <div class="container" ng-controller="colorCtrl">
+            <br><br>      
+            <h3>This is a simple playground! for you to create your own color palette with a darker variation from your inicial color.</h3>
+            <hr>
+            <div class="span12">
+              <div class="span5">
+                <h3>1º - Pick a color</h3>
+                <form><input type="text" id="color" name="color" value="#dbedff" /></form>
+                <div id="colorpicker"></div>
+              </div>
+              <div class="span6">
+                <h3>2º - Insert the hexa</h3>
+                  <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="color1">Color 1:</label>
+                        <div class="controls">
+                            <input type="text" id="color1" ng-model="color1" placeholder="Enter your first color" class="span3">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="color2">Color 2:</label>
+                        <div class="controls">
+                            <input type="text" id="color2" ng-model="color2" placeholder="Enter your second color" class="span3">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="color3">Color 3:</label>
+                        <div class="controls">
+                            <input type="text" id="color3" ng-model="color3" placeholder="Enter your third color" class="span3">
+                        </div>
+                        <div class="span3 actionBtn">
+                            <a href="#" id="generate" class="btn btn-large btn-block btn-primary">Create!</a>
+                        </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+            <hr>
+            <div class="span12 swtaches">
+                <h3>3º Check final result</h3>
+                <h3 class="demo-panel-title">Your Color Swatches</h3>
+                <div class="row mbl"></div>
+                <!-- /color swatches -->
+            </div>
+            <section class="well">
+              <p>Pretty simple right? I accpet suggestions on how to take this to the next level, contact me...</p>
+              <p>
+                  <iframe src="http://ghbtns.com/github-btn.html?user=zone-live&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="132" height="20"></iframe>
+                  <iframe src="http://ghbtns.com/github-btn.html?user=zone-live&repo=color-swatch&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+              </p>
+            </section>
+        </div>
+        <footer>
+            <section class="container">
+                <strong>&copy; Feel free to use all you want bro!</strong>
+                <aside>
+                  <p>Built with:</p>
+                  <ul>
+                    <li><a href="http://angularjs.org/">AngularJS</a></li>
+                    <li><a href="http://designmodo.com/demo/flat-ui/">Flat UI</a></li>
+                  </ul>
+                </aside>
+            </section>
+        </footer>
+ 
+<!-- What is it Modal -->
+<div id="whatModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Color Swatch</h3>
+  </div>
+  <div class="modal-body">
+    <p>Hey, just trying to give some color to the web.. and wanted to give a try with Angular JS + Flat UI, so feel free to play with the colors :)</p>
+    <br>
+    <p>Instructions</p>
+    <ol>
+      <li>Choose a color with the color picker</li>
+      <li>Paste the values to the inputs</li>
+      <li>Click create and there you have it!</li>
+    </ol>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/jquery.stacktable.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/farbtastic.js"></script>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+     $('#colorpicker').farbtastic('#color');
+ });
+
+function darkestColor(col, amt) {
+  
+    var usePound = false;
+  
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+ 
+    var num = parseInt(col,16);
+ 
+    var r = (num >> 16) + amt;
+ 
+    if (r > 255) r = 255;
+    else if  (r < 0) r = 0;
+ 
+    var b = ((num >> 8) & 0x00FF) + amt;
+ 
+    if (b > 255) b = 255;
+    else if  (b < 0) b = 0;
+ 
+    var g = (num & 0x0000FF) + amt;
+ 
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+ 
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+  
+}
+
+function colorCtrl($scope) {
+  
+  $('#generate').live('click', function() {
+
+    $('.demo-panel-title').fadeIn();
+
+    var color1 = $scope.color1;
+    var color2 = $scope.color2;
+    var color3 = $scope.color3;
+
+    var darkColor1 = darkestColor(color1, -20);
+    var darkColor2 = darkestColor(color2, -20);
+    var darkColor3 = darkestColor(color3, -20);
+
+    $('.mbl').append('<article><div class="span2">' +
+                        '<dl class="palette" style="background-color:'+color1+';">' +
+                          '<dt>'+ color1 +'</dt>' +
+                        '</dl>' +
+                        '<dl class="palette" style="background-color:'+darkColor1+';">' +
+                          '<dt>'+ darkColor1 +'</dt>' +
+                        '</dl>' +
+                    '</div>' + 
+                    '<div class="span2">' +
+                        '<dl class="palette" style="background-color:'+color2+';">' +
+                          '<dt>'+ color2 +'</dt>' +
+                        '</dl>' +
+                        '<dl class="palette" style="background-color:'+darkColor2+';">' +
+                          '<dt>'+ darkColor2 +'</dt>' +
+                        '</dl>' +
+                    '</div>' +
+                    '<div class="span2">' +
+                        '<dl class="palette" style="background-color:'+color3+';">' +
+                          '<dt>'+ color3 +'</dt>' +
+                        '</dl>' +
+                        '<dl class="palette" style="background-color:'+darkColor3+';">' +
+                          '<dt>'+ darkColor3 +'</dt>' +
+                        '</dl>' +
+                    '</div></article>');
+  });
+
+}
+
+</script>
+
+  </body>
+</html>
