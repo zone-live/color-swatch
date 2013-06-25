@@ -1,6 +1,7 @@
 header {
 	background: #e2e9e6;
 }
+header .muted a {text-decoration: none;}
 footer,
 hr {float: left;width: 100%;}
 .demo-panel-title {display: none;}
